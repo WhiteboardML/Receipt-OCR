@@ -1,0 +1,47 @@
+{
+  "store_name": "SUPERMARKET 'MAKRO' TASHKENT",
+  "total_items": 4,
+  "total_sum": 210000.0,
+  "products": [
+    {
+      "line_no": 1,
+      "sku": "F1539984",
+      "name": "Гель-маска для лица Avon 8мл",
+      "quantity": 5,
+      "unit": "шт",
+      "price": 9000,
+      "total": 45000
+    },
+    {
+      "line_no": 2,
+      "sku": "GLB4001",
+      "name": "Makaron Gallina Blanca 400g",
+      "quantity": 2,
+      "unit": "уп",
+      "price": 10500,
+      "total": 21000
+    },
+    {
+      "line_no": 3,
+      "sku": "UZ991021",
+      "name": "Olma sharbati 1l (O'zbekiston)",
+      "quantity": 2,
+      "unit": "л",
+      "price": 17000,
+      "total": 34000
+    },
+    {
+      "line_no": 4,
+      "sku": "F5761400",
+      "name": "Туал. вода Perceive Dew 50ml",
+      "quantity": 1,
+      "unit": "шт",
+      "price": 110000,
+      "total": 110000
+    }
+  ],
+  "noise_applied": [
+    "shadow",
+    "pen_marks"
+  ]
+}

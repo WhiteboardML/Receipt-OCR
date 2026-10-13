@@ -1,0 +1,47 @@
+{
+  "store_name": "IP 'FAMILY MARKET' CHILANZAR",
+  "total_items": 4,
+  "total_sum": 380000.0,
+  "products": [
+    {
+      "line_no": 1,
+      "sku": "SKR2001",
+      "name": "Скраб для тела увлажняющий 200мл",
+      "quantity": 5,
+      "unit": "шт",
+      "price": 47000,
+      "total": 235000
+    },
+    {
+      "line_no": 2,
+      "sku": "ORO9500",
+      "name": "Печенье OREO классическое 95г",
+      "quantity": 5,
+      "unit": "уп",
+      "price": 9000,
+      "total": 45000
+    },
+    {
+      "line_no": 3,
+      "sku": "GLB4001",
+      "name": "Makaron Gallina Blanca 400g",
+      "quantity": 3,
+      "unit": "уп",
+      "price": 10000,
+      "total": 30000
+    },
+    {
+      "line_no": 4,
+      "sku": "MSF3201",
+      "name": "Sut Musaffo 3.2% 1 litr",
+      "quantity": 5,
+      "unit": "л",
+      "price": 14000,
+      "total": 70000
+    }
+  ],
+  "noise_applied": [
+    "shadow",
+    "pen_marks"
+  ]
+}

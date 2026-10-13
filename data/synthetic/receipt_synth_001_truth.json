@@ -1,0 +1,47 @@
+{
+  "store_name": "SUPERMARKET 'MAKRO' TASHKENT",
+  "total_items": 4,
+  "total_sum": 335500.0,
+  "products": [
+    {
+      "line_no": 1,
+      "sku": "AHM0021",
+      "name": "Choy Ahmad English Breakfast 100g",
+      "quantity": 5,
+      "unit": "уп",
+      "price": 26000,
+      "total": 130000
+    },
+    {
+      "line_no": 2,
+      "sku": "F2664000",
+      "name": "Парф. вода Incandessence 50ml",
+      "quantity": 1,
+      "unit": "шт",
+      "price": 93500,
+      "total": 93500
+    },
+    {
+      "line_no": 3,
+      "sku": "ORO9500",
+      "name": "Печенье OREO классическое 95г",
+      "quantity": 3,
+      "unit": "уп",
+      "price": 10500,
+      "total": 31500
+    },
+    {
+      "line_no": 4,
+      "sku": "NSF1900",
+      "name": "Кофе Nescafe Gold 190г",
+      "quantity": 1,
+      "unit": "банка",
+      "price": 80500,
+      "total": 80500
+    }
+  ],
+  "noise_applied": [
+    "shadow",
+    "pen_marks"
+  ]
+}

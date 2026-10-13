@@ -1,0 +1,24 @@
+# PaddleOCR and PaddleX (Vision-Language & OCR engines)
+paddleocr>=3.6.0
+paddlex[ocr]>=3.6.0
+paddlepaddle>=2.6.0; sys_platform != "win32"
+paddlepaddle==2.6.1; sys_platform == "win32"
+
+# Apple Silicon GPU (Metal) acceleration for PaddleOCR-VL
+mlx-vlm>=0.7.0; sys_platform == "darwin" and platform_machine == "arm64"
+openai>=1.50.0; sys_platform == "darwin" and platform_machine == "arm64"
+
+# Computer Vision & Image Processing
+opencv-python>=4.8.0
+pillow>=10.0.0
+numpy>=1.24.0
+
+# Data Processing & Spreadsheet Export
+pandas>=2.0.0
+lxml>=4.9.0
+beautifulsoup4>=4.12.0
+rapidfuzz>=3.0.0
+openpyxl>=3.1.0
+
+# Testing
+pytest>=8.0.0

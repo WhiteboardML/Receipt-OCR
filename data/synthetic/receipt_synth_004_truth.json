@@ -1,0 +1,47 @@
+{
+  "store_name": "OOO 'KORZINKA TRADE' — MARKET",
+  "total_items": 4,
+  "total_sum": 458000.0,
+  "products": [
+    {
+      "line_no": 1,
+      "sku": "F5761400",
+      "name": "Туал. вода Perceive Dew 50ml",
+      "quantity": 3,
+      "unit": "шт",
+      "price": 113500,
+      "total": 340500
+    },
+    {
+      "line_no": 2,
+      "sku": "CRT0500",
+      "name": "Mineral suv Chortoq 0.5l gazli",
+      "quantity": 3,
+      "unit": "бутылка",
+      "price": 6500,
+      "total": 19500
+    },
+    {
+      "line_no": 3,
+      "sku": "NSF1900",
+      "name": "Кофе Nescafe Gold 190г",
+      "quantity": 1,
+      "unit": "банка",
+      "price": 84000,
+      "total": 84000
+    },
+    {
+      "line_no": 4,
+      "sku": "F1539984",
+      "name": "Гель-маска для лица Avon 8мл",
+      "quantity": 2,
+      "unit": "шт",
+      "price": 7000,
+      "total": 14000
+    }
+  ],
+  "noise_applied": [
+    "shadow",
+    "pen_marks"
+  ]
+}
