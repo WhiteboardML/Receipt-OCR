@@ -105,6 +105,40 @@ def _markdown_to_df(md_str: str) -> Optional[pd.DataFrame]:
     return df
 
 
+def _html_table_to_df(table_str: str) -> Optional[pd.DataFrame]:
+    """
+    Lightweight fallback parser for basic HTML tables using regular expressions.
+    Used when pandas.read_html fails or optional parsers (lxml/beautifulsoup4) are missing.
+    """
+    tr_matches = re.findall(r"<tr[^>]*>(.*?)</tr>", table_str, re.DOTALL | re.IGNORECASE)
+    if not tr_matches:
+        return None
+
+    rows = []
+    for tr in tr_matches:
+        cells = re.findall(r"<t[hd][^>]*>(.*?)</t[hd]>", tr, re.DOTALL | re.IGNORECASE)
+        cleaned = [re.sub(r"<[^>]+>", "", c).strip() for c in cells]
+        if cleaned:
+            rows.append(cleaned)
+
+    if not rows:
+        return None
+
+    if len(rows) == 1:
+        return pd.DataFrame(columns=rows[0])
+
+    headers = rows[0]
+    data = []
+    for r in rows[1:]:
+        if len(r) < len(headers):
+            r = r + [""] * (len(headers) - len(r))
+        elif len(r) > len(headers):
+            r = r[:len(headers)]
+        data.append(r)
+
+    return pd.DataFrame(data, columns=headers)
+
+
 def _parse_table_string(table_str: str) -> Optional[pd.DataFrame]:
     """
     Converts either an HTML table string or a Markdown table string into a DataFrame.
@@ -125,7 +159,12 @@ def _parse_table_string(table_str: str) -> Optional[pd.DataFrame]:
                     df = df.drop(index=0).reset_index(drop=True)
                 return df
         except Exception as exc:
-            logger.debug("HTML table parsing fallback: %s", exc)
+            logger.debug("HTML table parsing via read_html failed: %s", exc)
+
+        # Fallback to pure-Python regex parser if read_html fails (e.g. missing lxml/bs4)
+        df = _html_table_to_df(table_str)
+        if df is not None and not df.empty:
+            return df
 
     # Case 2: Markdown table
     if "|" in table_str:
